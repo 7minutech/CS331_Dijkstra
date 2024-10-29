@@ -1,2 +1,2 @@
-# Dijkstra-s_CS331
+# CS331_Dijkstra
 Implementation of dijkstra's algorithm in python for concept presentation
