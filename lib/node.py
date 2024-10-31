@@ -1,8 +1,7 @@
 class Node:
-    def __init__(self, label, links):
+    def __init__(self, label):
         self.label = label
-        self.links = links
-        self.explored = False
+        self.links = {}
 
 
         
