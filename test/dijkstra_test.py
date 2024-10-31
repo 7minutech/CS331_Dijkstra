@@ -1,6 +1,7 @@
 #run command python -m pytest
 from lib.dijkstra import Dijkstra
 from lib.node import Node
+import math
 
 def add_nodes():
     starting_node = Node("A")
@@ -21,6 +22,6 @@ def set_unknown():
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
     algo.set_unknown
-    assert algo.links_from_starting_node["B"] == [-1, None]
-    assert algo.links_from_starting_node["C"] == [-1, None]
+    assert algo.links_from_starting_node["B"] == [math.inf, None]
+    assert algo.links_from_starting_node["C"] == [math.inf, None]
 
