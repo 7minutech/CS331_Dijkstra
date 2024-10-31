@@ -14,8 +14,8 @@ def test_add_nodes():
     nodes = [starting_node, node_1, node_2, node_3, node_4]
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
-    assert algo.nodes[0] == starting_node
-    assert algo.nodes[-1] == node_4
+    assert algo.nodes[0] == starting_node.label
+    assert algo.nodes[-1] == node_4.label
 
 def test_set_unknown():
     starting_node = Node("A")
