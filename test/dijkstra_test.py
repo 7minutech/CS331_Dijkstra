@@ -1,4 +1,5 @@
-#run command python -m pytest
+#run command python -m pytest 
+# for this specific file python -m pytest .\test\dijkstra_test.py
 
 from lib.dijkstra import Dijkstra
 from lib.node import Node

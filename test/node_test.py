@@ -1,4 +1,5 @@
 #run command python -m pytest
+# for this specific file python -m pytest .\test\node_test.py
 
 from lib.node import Node
 def test_add_link():
