@@ -4,4 +4,5 @@ class Dijkstra:
         links_from_starting_node = {}
         links_from_starting_node[starting_node.label] = [0, starting_node.label]
         nodes = []
+        visited_nodes = []
     
