@@ -7,6 +7,8 @@ class Dijkstra:
         self.visited_nodes = []
         self.current_node = starting_node
 
+    def add_nodes(self,node_arr):
+        self.nodes = [node.label for node in node_arr]
 
 
     
