@@ -25,9 +25,9 @@ def test_set_unknown():
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
     algo.set_unknown()  
-    assert algo.links_from_starting_node["A"] == [0, "A"]
-    assert algo.links_from_starting_node["B"] == [math.inf, None]
-    assert algo.links_from_starting_node["C"] == [math.inf, None]
+    assert algo.links_from_starting_node[starting_node] == [0, None]
+    assert algo.links_from_starting_node[node_1] == [math.inf, None]
+    assert algo.links_from_starting_node[node_2] == [math.inf, None]
 
 def test_set_links_from_start():
     starting_node = Node("A")
