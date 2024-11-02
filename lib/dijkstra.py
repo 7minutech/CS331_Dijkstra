@@ -1,4 +1,5 @@
 from lib.node import Node
+import math
 class Dijkstra:
     def __init__(self, starting_node):
         self.links_from_starting_node = {}
@@ -9,6 +10,10 @@ class Dijkstra:
 
     def add_nodes(self,node_arr):
         self.nodes = [node.label for node in node_arr]
+
+    def set_unknown(self):
+        for i in range(1, len(self.nodes)):
+            self.links_from_starting_node[self.nodes[i]] = [math.inf, None]
 
 
     

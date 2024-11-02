@@ -25,6 +25,7 @@ def test_set_unknown():
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
     algo.set_unknown()  # Corrected: Added parentheses
+    assert algo.links_from_starting_node["A"] == [0, "A"]
     assert algo.links_from_starting_node["B"] == [math.inf, None]
     assert algo.links_from_starting_node["C"] == [math.inf, None]
 
