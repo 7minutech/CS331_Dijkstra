@@ -24,7 +24,7 @@ def test_set_unknown():
     nodes = [starting_node, node_1, node_2]
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
-    algo.set_unknown()  # Corrected: Added parentheses
+    algo.set_unknown()  
     assert algo.links_from_starting_node["A"] == [0, "A"]
     assert algo.links_from_starting_node["B"] == [math.inf, None]
     assert algo.links_from_starting_node["C"] == [math.inf, None]
@@ -42,7 +42,7 @@ def test_set_links_from_start():
     algo = Dijkstra(starting_node)
     algo.add_nodes(nodes)
     algo.set_unknown()
-    algo.set_shortest_path()  # Assuming this method is defined correctly
+    algo.set_shortest_path() 
     assert algo.links_from_node["A"] == [0, None]
     assert algo.links_from_node["B"] == [5, "A"]
     assert algo.links_from_node["C"] == [4, "A"]
