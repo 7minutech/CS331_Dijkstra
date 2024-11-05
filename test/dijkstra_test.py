@@ -43,10 +43,17 @@ def test_set_links_from_start():
     algo.add_nodes(nodes)
     algo.set_unknown()
     algo.set_shortest_path() 
-    assert algo.links_from_starting_node[starting_node] == [0, None]
-    assert algo.links_from_starting_node[node_b] == [5, starting_node]
-    assert algo.links_from_starting_node[node_c] == [4, starting_node]
-    assert algo.links_from_starting_node[node_d] == [7, node_c]
+    
+  
+   
+    assert algo.links_from_starting_node[starting_node][0] == 0
+    assert algo.links_from_starting_node[starting_node][1] == None
+    assert algo.links_from_starting_node[node_b][0] == 5
+    assert algo.links_from_starting_node[node_b][1] == starting_node
+    assert algo.links_from_starting_node[node_c][0] == 4
+    assert algo.links_from_starting_node[node_c][1]  == starting_node
+    assert algo.links_from_starting_node[node_d][0] == 7 
+    assert algo.links_from_starting_node[node_d][1] == node_c
 
 
 
