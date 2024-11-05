@@ -56,5 +56,37 @@ def test_set_links_from_start():
     assert algo.links_from_starting_node[node_d][1] == node_c
 
 
+def test_complex_set_links_from_start():
+    starting_node = Node("A")
+    node_b = Node("B")
+    node_c = Node("C")
+    node_d = Node("D")
+    node_e = Node("E")
+    
+    starting_node.add_link(node_b, 10)
+    starting_node.add_link(node_d, 16)
+    node_b.add_link(node_c, 12)
+    node_b.add_link(node_d, 18)
+    node_c.add_link(node_e, 8)
+    node_d.add_link(node_c, 4)
+    node_d.add_link(node_e, 14)
+    nodes = [starting_node, node_b, node_c, node_d,node_e]
+    algo = Dijkstra(starting_node)
+    algo.add_nodes(nodes)
+    algo.set_unknown()
+    algo.set_shortest_path() 
+    
+  
+   
+    assert algo.links_from_starting_node[starting_node][0] == 0
+    assert algo.links_from_starting_node[starting_node][1] == None
+    assert algo.links_from_starting_node[node_b][0] == 10
+    assert algo.links_from_starting_node[node_b][1] == starting_node
+    assert algo.links_from_starting_node[node_c][0] == 20
+    assert algo.links_from_starting_node[node_c][1]  == node_d
+    assert algo.links_from_starting_node[node_d][0] == 16
+    assert algo.links_from_starting_node[node_d][1] == starting_node
+    assert algo.links_from_starting_node[node_e][0] == 28
+    assert algo.links_from_starting_node[node_e][1] == node_c
 
 
