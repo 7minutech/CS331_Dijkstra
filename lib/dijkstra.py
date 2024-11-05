@@ -25,7 +25,7 @@ class Dijkstra:
           
             # check each node from current node
             for node, weight in self.current_node.links.items():
-                
+          
                 if self.links_from_starting_node[node][0] > weight + self.links_from_starting_node[self.current_node][0]:
                     self.links_from_starting_node[node] = weight + self.links_from_starting_node[self.current_node][0], self.current_node
             
