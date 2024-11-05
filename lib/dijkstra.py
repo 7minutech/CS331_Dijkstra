@@ -3,7 +3,7 @@ import math
 class Dijkstra:
     def __init__(self, starting_node):
         self.links_from_starting_node = {}
-        self.links_from_starting_node[starting_node] = [0, starting_node]
+        self.links_from_starting_node[starting_node] = [0, None]
         self.nodes = []
         self.visited_nodes = []
         self.current_node = starting_node
@@ -27,7 +27,7 @@ class Dijkstra:
             for node, weight in self.current_node.links.items():
                 
                 if self.links_from_starting_node[node][0] > weight + self.links_from_starting_node[self.current_node][0]:
-                  self.links_from_starting_node[node] = weight + self.links_from_starting_node[self.current_node][0], self.current_node
+                    self.links_from_starting_node[node] = weight + self.links_from_starting_node[self.current_node][0], self.current_node
             
             #figure out which node to vist next
             self.current_node = None
