@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, label):
         self.label = label
-        self.links =    {}
+        self.links = {}
 
     # must be able to add a reference 
     # from one node to another
