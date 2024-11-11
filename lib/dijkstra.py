@@ -40,6 +40,23 @@ class Dijkstra:
                     self.current_node = node
 
         return self.links_from_starting_node
+    
+    def display_shortest_path(self):
+        for node, weight in self.links_from_starting_node.items():
+            print(f"From A to {node.label} : {weight[0]}")
+    
+    def run_algorithm(self, nodes):
+        self.add_nodes(nodes)
+        self.set_unknown()
+        self.set_shortest_path()
+        self.display_shortest_path()
+
+    
+    
+
+
+
+
 
 
 

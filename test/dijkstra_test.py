@@ -89,4 +89,6 @@ def test_complex_set_links_from_start():
     assert algo.links_from_starting_node[node_e][0] == 28
     assert algo.links_from_starting_node[node_e][1] == node_c
 
+    algo.display_shortest_path()
+
 
